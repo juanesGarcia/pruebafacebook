@@ -18,9 +18,8 @@ Route::get('/', function () {
     return view('prue');
 });
 
-Route::get('/login-facebook', function () {
-    return Socialite::driver('facebook')->redirect();
-});
-Route::get('/facebook-callback', function () {
-    $user=Socialite::driver('facebook')->user();
-});
+// Ruta de inicio de sesión de Facebook
+Route::get('/login/facebook', 'App\Http\Controllers\Auth\LoginController@redirectToFacebook');
+
+// Ruta de devolución de llamada de Facebook
+Route::get('/login/facebook/callback', 'App\Http\Controllers\Auth\LoginController@handleFacebookCallback');
