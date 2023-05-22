@@ -34,6 +34,11 @@ return [
         'client_id' => env('FACEBOOK_CLIENT_ID'),  
         'client_secret' => env('FACEBOOK_CLIENT_SECRET'),  
         'redirect' => env('FACEBOOK_REDIRECT_URI') 
-      ],
+    ],
+    'google' => [    
+        'google_id' => '28380013924-pcmv1cobbgemj710g1scc8ohpoafdk4e.apps.googleusercontent.com"',  
+        'google_secret' => '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',  
+        'redirect' => '/google-callback', 
+    ],
 
 ];
